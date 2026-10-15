@@ -1,0 +1,1029 @@
+{
+  "schema": 2,
+  "build": "kinematic-rig-v2",
+  "fixedDeltaTime": 0.016666666666666666,
+  "totalMass": 104,
+  "bodies": [
+    {
+      "name": "Chest",
+      "mass": 5,
+      "position": [
+        0,
+        0.8699999999999999,
+        -0.046
+      ],
+      "euler": [
+        -1,
+        0,
+        0
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.14,
+        "length": 0.5,
+        "center": [
+          0,
+          0.1,
+          0
+        ],
+        "axis": 0
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "Waist",
+        "angles": [
+          [
+            -40,
+            40
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "RightThigh",
+      "mass": 5,
+      "position": [
+        0.23,
+        0.43999999999999995,
+        0
+      ],
+      "euler": [
+        0,
+        180,
+        180
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.08,
+        "length": 0.3,
+        "center": [
+          0,
+          0.10999999999999999,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "Hips",
+        "angles": [
+          [
+            -90,
+            90
+          ],
+          [
+            -45,
+            45
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "name": "LeftArm",
+      "mass": 5,
+      "position": [
+        -0.19,
+        1.0099999999999998,
+        -0.046
+      ],
+      "euler": [
+        -90,
+        100.20397410227521,
+        0
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.06,
+        "length": 0.4,
+        "center": [
+          0,
+          0.14,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "Chest",
+        "angles": [
+          [
+            -60,
+            90
+          ],
+          [
+            -90,
+            90
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "perpendicular": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Hips",
+      "mass": 7,
+      "position": [
+        0,
+        0.35,
+        -0.02
+      ],
+      "euler": [
+        0,
+        0,
+        0
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.15,
+        "length": 0.54,
+        "center": [
+          0,
+          0.16999999999999998,
+          0
+        ],
+        "axis": 0
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": null
+    },
+    {
+      "name": "LeftForearm",
+      "mass": 5,
+      "position": [
+        -0.5757998629976886,
+        1.0099999999999998,
+        0.02344397533958395
+      ],
+      "euler": [
+        -83.1788137458661,
+        -85.42606733237464,
+        179.99998802942915
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.06,
+        "length": 0.4,
+        "center": [
+          0,
+          0.14,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "LeftArm",
+        "angles": [
+          [
+            -120,
+            -10
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Head",
+      "mass": 5,
+      "position": [
+        0,
+        1.0799999999999998,
+        -0.0565
+      ],
+      "euler": [
+        15,
+        0,
+        0
+      ],
+      "shape": {
+        "kind": "sphere",
+        "radius": 0.23,
+        "center": [
+          0,
+          0.30000000000000004,
+          0.0575
+        ]
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "Chest",
+        "angles": [
+          [
+            -30,
+            30
+          ],
+          [
+            -60,
+            60
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "RightArm",
+      "mass": 5,
+      "position": [
+        0.19,
+        1.0099999999999998,
+        -0.046
+      ],
+      "euler": [
+        -90,
+        259.7960258977248,
+        0
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.06,
+        "length": 0.4,
+        "center": [
+          0,
+          0.14,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "Chest",
+        "angles": [
+          [
+            -60,
+            90
+          ],
+          [
+            -90,
+            90
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "perpendicular": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "LeftThigh",
+      "mass": 5,
+      "position": [
+        -0.23,
+        0.43999999999999995,
+        0
+      ],
+      "euler": [
+        0,
+        180,
+        180
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.08,
+        "length": 0.3,
+        "center": [
+          0,
+          0.10999999999999999,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "Hips",
+        "angles": [
+          [
+            -90,
+            90
+          ],
+          [
+            -45,
+            45
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "name": "Ball",
+      "mass": 20,
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "euler": [
+        0,
+        0,
+        0
+      ],
+      "shape": {
+        "kind": "sphere",
+        "radius": 0.3,
+        "center": [
+          0,
+          0,
+          0
+        ]
+      },
+      "angularDamping": 1,
+      "friction": 0.9,
+      "joint": null
+    },
+    {
+      "name": "LeftFoot",
+      "mass": 5,
+      "position": [
+        -0.23,
+        0.06,
+        0
+      ],
+      "euler": [
+        0,
+        180,
+        180
+      ],
+      "shape": {
+        "kind": "sphere",
+        "radius": 0.055,
+        "center": [
+          0,
+          0,
+          0
+        ]
+      },
+      "angularDamping": 5,
+      "friction": 0.8,
+      "joint": {
+        "parent": "LeftLeg",
+        "angles": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "RightLeg",
+      "mass": 5,
+      "position": [
+        0.23,
+        0.22,
+        0
+      ],
+      "euler": [
+        0,
+        180,
+        180
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.06,
+        "length": 0.22,
+        "center": [
+          0,
+          0.08,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "RightThigh",
+        "angles": [
+          [
+            -120,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "RightHand",
+      "mass": 5,
+      "position": [
+        0.9083590476329448,
+        0.9700928978437691,
+        0.05004871011040445
+      ],
+      "euler": [
+        -83.1788137458661,
+        85.42606733237464,
+        -179.99998802942915
+      ],
+      "shape": {
+        "kind": "sphere",
+        "radius": 0.07,
+        "center": [
+          0,
+          0,
+          0
+        ]
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "RightForearm",
+        "angles": [
+          null,
+          null,
+          null
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "LeftLeg",
+      "mass": 5,
+      "position": [
+        -0.23,
+        0.22,
+        0
+      ],
+      "euler": [
+        0,
+        180,
+        180
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.06,
+        "length": 0.22,
+        "center": [
+          0,
+          0.08,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "LeftThigh",
+        "angles": [
+          [
+            -120,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "RightFoot",
+      "mass": 5,
+      "position": [
+        0.23,
+        0.06,
+        0
+      ],
+      "euler": [
+        0,
+        180,
+        180
+      ],
+      "shape": {
+        "kind": "sphere",
+        "radius": 0.055,
+        "center": [
+          0,
+          0,
+          0
+        ]
+      },
+      "angularDamping": 5,
+      "friction": 0.8,
+      "joint": {
+        "parent": "RightLeg",
+        "angles": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Waist",
+      "mass": 7,
+      "position": [
+        0,
+        0.5499999999999999,
+        -0.03
+      ],
+      "euler": [
+        0,
+        0,
+        0
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.17,
+        "length": 0.52,
+        "center": [
+          0,
+          0.15000000000000002,
+          0
+        ],
+        "axis": 0
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "Hips",
+        "angles": [
+          [
+            -20,
+            20
+          ],
+          [
+            -10,
+            10
+          ],
+          [
+            -10,
+            10
+          ]
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "RightForearm",
+      "mass": 5,
+      "position": [
+        0.5757998629976886,
+        1.0099999999999998,
+        0.02344397533958395
+      ],
+      "euler": [
+        -83.1788137458661,
+        85.42606733237464,
+        -179.99998802942915
+      ],
+      "shape": {
+        "kind": "capsule",
+        "radius": 0.06,
+        "length": 0.4,
+        "center": [
+          0,
+          0.14,
+          0
+        ],
+        "axis": 1
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "RightArm",
+        "angles": [
+          [
+            10,
+            120
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "LeftHand",
+      "mass": 5,
+      "position": [
+        -0.9083590476329448,
+        0.9700928978437691,
+        0.05004871011040445
+      ],
+      "euler": [
+        -83.1788137458661,
+        -85.42606733237464,
+        179.99998802942915
+      ],
+      "shape": {
+        "kind": "sphere",
+        "radius": 0.07,
+        "center": [
+          0,
+          0,
+          0
+        ]
+      },
+      "angularDamping": 1,
+      "friction": 0.4,
+      "joint": {
+        "parent": "LeftForearm",
+        "angles": [
+          null,
+          null,
+          null
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "perpendicular": [
+          0,
+          1,
+          0
+        ]
+      }
+    }
+  ],
+  "ignoredCollisionPairs": [
+    [
+      "Ball",
+      "Chest"
+    ],
+    [
+      "Ball",
+      "Head"
+    ],
+    [
+      "Ball",
+      "Hips"
+    ],
+    [
+      "Ball",
+      "LeftArm"
+    ],
+    [
+      "Ball",
+      "LeftFoot"
+    ],
+    [
+      "Ball",
+      "LeftForearm"
+    ],
+    [
+      "Ball",
+      "LeftHand"
+    ],
+    [
+      "Ball",
+      "LeftLeg"
+    ],
+    [
+      "Ball",
+      "LeftThigh"
+    ],
+    [
+      "Ball",
+      "RightArm"
+    ],
+    [
+      "Ball",
+      "RightFoot"
+    ],
+    [
+      "Ball",
+      "RightForearm"
+    ],
+    [
+      "Ball",
+      "RightHand"
+    ],
+    [
+      "Ball",
+      "RightLeg"
+    ],
+    [
+      "Ball",
+      "RightThigh"
+    ],
+    [
+      "Ball",
+      "Waist"
+    ],
+    [
+      "Chest",
+      "Head"
+    ],
+    [
+      "Chest",
+      "Hips"
+    ],
+    [
+      "Chest",
+      "LeftArm"
+    ],
+    [
+      "Chest",
+      "LeftForearm"
+    ],
+    [
+      "Chest",
+      "RightArm"
+    ],
+    [
+      "Chest",
+      "RightForearm"
+    ],
+    [
+      "Chest",
+      "Waist"
+    ],
+    [
+      "Hips",
+      "LeftFoot"
+    ],
+    [
+      "Hips",
+      "LeftLeg"
+    ],
+    [
+      "Hips",
+      "LeftThigh"
+    ],
+    [
+      "Hips",
+      "RightFoot"
+    ],
+    [
+      "Hips",
+      "RightLeg"
+    ],
+    [
+      "Hips",
+      "RightThigh"
+    ],
+    [
+      "Hips",
+      "Waist"
+    ],
+    [
+      "LeftArm",
+      "LeftForearm"
+    ],
+    [
+      "LeftArm",
+      "LeftHand"
+    ],
+    [
+      "LeftFoot",
+      "LeftLeg"
+    ],
+    [
+      "LeftForearm",
+      "LeftHand"
+    ],
+    [
+      "LeftLeg",
+      "LeftThigh"
+    ],
+    [
+      "RightArm",
+      "RightForearm"
+    ],
+    [
+      "RightArm",
+      "RightHand"
+    ],
+    [
+      "RightFoot",
+      "RightLeg"
+    ],
+    [
+      "RightForearm",
+      "RightHand"
+    ],
+    [
+      "RightLeg",
+      "RightThigh"
+    ]
+  ],
+  "antiStretch": [
+    [
+      "LeftHand",
+      "Chest"
+    ],
+    [
+      "RightHand",
+      "Chest"
+    ],
+    [
+      "LeftFoot",
+      "Hips"
+    ],
+    [
+      "RightFoot",
+      "Hips"
+    ]
+  ],
+  "suspension": {
+    "travel": 0.1,
+    "stiffness": 100000,
+    "damping": 0
+  }
+}

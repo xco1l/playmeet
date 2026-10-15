@@ -1,0 +1,50 @@
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;font:14px/1.5 system-ui,sans-serif;color:#e6eef4;background:#15232d}
+canvas{display:block;width:100vw;height:100vh;outline:none;touch-action:none}
+.control-panel,.field-guide{position:absolute;top:20px;max-height:calc(100vh - 76px);overflow:auto;padding:20px;background:#172630ed;border:1px solid #425761;border-radius:14px;box-shadow:0 12px 40px #0003;scrollbar-width:thin;scrollbar-color:#52717d transparent}
+.control-panel{left:20px;width:310px}
+.field-guide{right:20px;top:72px;width:300px;max-height:calc(100vh - 128px)}
+.eyebrow{font-size:9px;letter-spacing:.13em;color:#86d8db}
+h1{font-size:23px;line-height:1.2;margin:10px 0}
+h2{font-size:19px;line-height:1.3;margin:14px 0 8px}
+.intro,.note{color:#a5b5bf;font-size:11px}
+.metrics{display:flex;justify-content:space-between;border-block:1px solid #3c4d57;padding:10px 0;margin:14px 0}
+.metrics b{display:block;font-size:20px}.metrics span{font-size:9px;color:#a5b5bf}.metrics small{font-size:10px}
+.row{display:flex;gap:7px;margin:10px 0}
+button,select{font:inherit;font-size:11px;color:#e2ebee;background:#324956;border:1px solid #52717d;border-radius:7px;padding:8px 9px}
+button{cursor:pointer;flex:1}button:hover{background:#426472}
+button:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #86d8db;outline-offset:3px}
+button:disabled{opacity:.5;cursor:default}
+select{display:block;width:100%;margin-top:5px}
+label{display:block;font-size:12px;margin:12px 0}
+label output{float:right;color:#86d8db}
+input[type=range]{display:block;width:100%;margin-top:8px;accent-color:#86d8db}
+.toggle{display:flex;gap:8px;align-items:center}input[type=checkbox]{accent-color:#86d8db}
+.grip-latches{justify-content:space-between}.grip-latches label{font-size:10px;margin:0}
+.panel-switch{position:absolute;right:20px;bottom:56px;z-index:20;background:#172630ed}
+.panels-hidden .control-panel,.panels-hidden .field-guide{display:none!important}
+details{margin:12px 0;border-block:1px solid #3c4d57;padding:10px 0}
+summary{color:#b7d9dc;font-size:12px;cursor:pointer}
+dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 10px;padding-top:6px;font-size:10px}
+dt{color:#a5b5bf}dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+kbd{font:10px monospace;background:#334854;border-radius:3px;padding:2px 4px}
+.keys{color:#c0cfd7;font-size:10px;line-height:2}.note{font-size:10px}
+.hint{padding:9px 11px;border-left:2px solid var(--station-color,#86d8db);background:#263b464d;font-size:11px;color:#c0cfd7}
+.badge{position:absolute;bottom:18px;right:20px;background:#172630dd;padding:8px 14px;border-radius:20px;font-size:11px;color:#aee4d8}
+#failure{color:#ffaf99;font-size:12px;white-space:pre-wrap}
+.camera-hint{position:absolute;top:20px;right:20px;max-width:calc(100vw - 370px);padding:9px 14px;border-radius:10px;background:#172630dd;color:#aee4d8;font-size:11px;pointer-events:none}
+.guide-header{display:flex;justify-content:space-between;gap:10px;align-items:center}
+#allProgress{color:#a5b5bf;font-size:10px}
+#stationProgress{font-size:11px;color:#b7d9dc}
+.checklist{list-style:none;padding:0;margin:12px 0}
+.checklist li{padding:11px 0;border-top:1px solid #3c4d57}
+.check-title{display:flex;gap:8px;font-size:12px;align-items:baseline}
+.check-mark{color:#91a2ab;flex:none}.complete .check-mark{color:#aee4b3}
+.checklist p{font-size:11px;color:#a5b5bf;margin:5px 0 0 21px}
+.checklist .check-detail{color:#83bcb6;font-size:10px}
+.checklist button{margin:8px 0 0 21px;padding:5px 9px}
+.check-type{color:#86a5ad;text-transform:uppercase;font-size:8px;letter-spacing:.08em;display:block;margin:4px 0 0 21px}
+.quiet{background:transparent;font-size:10px}
+@media(max-width:1050px){.control-panel{width:270px;padding:16px}.field-guide{width:260px;padding:16px}h1{font-size:20px}}
+@media(max-width:760px){.control-panel{left:10px;top:10px;width:240px;max-height:56vh;padding:14px}.field-guide{top:auto;bottom:50px;right:10px;width:240px;max-height:35vh;padding:14px}.camera-hint{top:auto;bottom:10px;left:10px;right:auto;max-width:calc(100vw - 135px);padding:6px 9px;font-size:9px}.badge{bottom:10px;right:10px;padding:6px 8px;font-size:9px}.metrics{margin:10px 0;padding:8px 0}}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Play Meet · Physics playground</title></head>
+<body>
+<canvas id="view" tabindex="0" aria-label="Physics scene. Click to capture the mouse, Escape to release it."></canvas>
+<div id="cameraHint" class="camera-hint" role="status">Click the scene to control the character</div>
+<button id="panelToggle" class="panel-switch" aria-expanded="true" aria-controls="controlPanel fieldGuide">Hide panels · H</button>
+<aside id="controlPanel" class="control-panel" aria-label="Playground controls">
+  <div class="eyebrow">PLAY MEET · BABYLON.JS + HAVOK</div>
+  <h1>Physics playground</h1>
+  <p class="intro">Nine stations. One character. Test every mechanic.</p>
+  <div class="metrics"><div><b id="bodyCount">17</b><span>physics bodies</span></div><div><b><span id="totalMass">104.0</span> <small>kg</small></b><span>total mass</span></div><div><b>60 <small>Hz</small></b><span>physics timestep</span></div></div>
+  <div class="row"><button id="reset">Restore checkpoint · R</button><button id="pause" aria-label="Pause">Pause</button></div>
+  <label>Scene <select id="scenario"><option value="playground" selected>All mechanics</option><option value="lab">Open floor</option><option value="box">Pick up a crate</option><option value="ledge">Climb a ledge</option><option value="carry">Carry a beam</option><option value="platform">Moving platform</option><option value="slope">Slope and recovery</option></select></label>
+  <div id="stationPanel">
+    <label>Quick travel <select id="station"></select></label>
+    <label>Starting point <select id="checkpoint"></select></label>
+    <p class="note">Travel and R restore every prop. Completed checks stay until you clear results.</p>
+  </div>
+  <p id="hint" class="hint"></p>
+  <div id="demoPanel" hidden><button id="demo">Show the climb</button><p id="demoStatus" role="status"></p></div>
+  <label>Movement strength <output id="strengthValue">100%</output><input id="strength" type="range" min="0.25" max="1" step="0.25" value="1"></label>
+  <div class="row"><button id="leftHand" class="hand left" aria-pressed="false">Hold · Q</button><button id="rightHand" class="hand right" aria-pressed="false">Hold · E</button></div>
+  <div class="row grip-latches"><label class="toggle"><input id="leftLatch" type="checkbox"> Keep left grip</label><label class="toggle"><input id="rightLatch" type="checkbox"> Keep right grip</label></div>
+  <p class="note">Keep a grip while adjusting look controls. Uncheck to release; Escape and R release both.</p>
+  <details>
+    <summary>Look controls and test tools</summary>
+    <label>Look pitch <output id="pitchValue">0°</output><input id="pitch" type="range" min="-80" max="80" value="0"></label>
+    <label>Heading <output id="yawValue">0°</output><input id="yaw" type="range" min="-180" max="180" value="0"></label>
+    <div class="row"><button id="up">Look up</button><button id="level">Look ahead</button><button id="down">Look down · 80°</button></div>
+    <label class="toggle"><input id="active" type="checkbox" checked> Active controller</label>
+    <div class="row"><button id="limp" aria-pressed="false">Hold to go limp · Y</button></div>
+    <div id="testTools">
+      <div class="row"><button id="impact">Apply test impact · I</button></div>
+      <p class="note">Controlled recovery probe. Ordinary collisions do not send this hit event.</p>
+      <div class="row"><button id="suspendGrip">Suspend grips · G</button><button id="loadGrip">Stress grips · L</button></div>
+      <p class="note">Use G or L while holding Q / E. G blocks held surfaces for one second; L applies a load pulse.</p>
+      <button id="toggleAmber">Enable amber block grips</button>
+      <p id="toolStatus" role="status" class="note"></p>
+    </div>
+  </details>
+  <dl>
+    <dt>Left hand</dt><dd id="leftState">Free</dd><dt>Right hand</dt><dd id="rightState">Free</dd>
+    <dt>State</dt><dd id="state">Loading…</dd><dt>Support</dt><dd id="support">—</dd><dt>Support speed</dt><dd id="supportSpeed">—</dd>
+    <dt>Head height</dt><dd id="height">—</dd><dt>Centre of mass speed</dt><dd id="speed">—</dd>
+    <dt>Joint anchor error</dt><dd id="error">—</dd><dt>Camera / requested</dt><dd id="cameraDistance">—</dd>
+  </dl>
+  <p class="keys"><kbd>W A S D</kbd> move · <kbd>Q / E</kbd> hands<br><kbd>↑ ↓</kbd> look · <kbd>Space</kbd> jump<br><kbd>R</kbd> restore · <kbd>Y</kbd> go limp<br><kbd>[ / ]</kbd> previous / next station<br>Click the scene for mouse look and hand buttons.<br><kbd>Esc</kbd> releases the cursor; the wheel adjusts zoom.</p>
+  <p id="failure" role="alert"></p>
+</aside>
+<section id="fieldGuide" class="field-guide" aria-label="Station checks">
+  <div class="guide-header"><span class="eyebrow">FIELD GUIDE</span><span id="allProgress">0 checks complete</span></div>
+  <h2 id="stationTitle"></h2>
+  <div class="row"><button id="previousStation" aria-label="Previous station">← Previous</button><button id="nextStation" aria-label="Next station">Next →</button></div>
+  <p class="note">The guide tracks the selected station until you change it. Sensor checks complete when observed; confirm visual checks yourself. Results last for this page session.</p>
+  <p id="stationProgress" role="status"></p>
+  <ol id="checklist" class="checklist"></ol>
+  <button id="clearChecks" class="quiet">Clear all results</button>
+</section>
+<div class="badge" id="status">Loading Havok…</div>
+<script type="module" src="/src/main.js"></script>
+</body></html>
